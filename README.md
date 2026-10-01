@@ -36,35 +36,3 @@ Estas cifras salen de la validación cruzada de 10 folds aplicando SMOTE solo de
 | `modelo-attrition.pkl` | Modelo final guardado (modelo, codificador de la variable objetivo, lista de variables y normalizador) |
 | `requirements.txt` | Librerías necesarias, con sus versiones |
 | `.streamlit/config.toml` | Colores del tema de la aplicación |
-
-## Cómo ejecutarlo
-
-Requiere Python 3.11 o superior.
-
-```bash
-# 1. Instalar las librerías
-pip install -r requirements.txt
-
-# 2. Abrir la aplicación
-streamlit run app.py
-```
-
-La aplicación se abre en `http://localhost:8501`. Tiene tres pestañas:
-
-* **Evaluar un cliente:** se ingresan los datos de un cliente y devuelve la probabilidad de abandono, el nivel de riesgo, la acción recomendada y las cinco variables que más pesaron en la predicción.
-* **Evaluar una cartera:** se sube un CSV con clientes (la plantilla descargable o el archivo original `BankChurners.csv`) y devuelve la lista ordenada por riesgo.
-* **Cómo funciona el modelo:** resumen de la construcción, la calidad y la importancia de las variables.
-
-### Para ejecutar el notebook
-
-El notebook lee `BankChurners.csv` desde la misma carpeta. Descárgalo desde [Kaggle](https://www.kaggle.com/datasets/sakshigoyal7/credit-card-customers) y colócalo junto al notebook. Además de las librerías de `requirements.txt`, necesita `imbalanced-learn` y `matplotlib`:
-
-```bash
-pip install imbalanced-learn matplotlib jupyter
-```
-
-## Limitaciones
-
-* La base es una foto sin fecha: no se sabe a qué periodo corresponde y el modelo conviene reentrenarlo con datos nuevos.
-* Los niveles de riesgo de la aplicación (30 % y 60 %) son un punto de partida que el negocio debe ajustar según el costo real de una campaña de retención.
-* La exactitud de los datos frente al banco de origen no se puede verificar, porque es un dataset público de Kaggle.
