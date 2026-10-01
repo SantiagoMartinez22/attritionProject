@@ -32,6 +32,7 @@ Estas cifras salen de la validación cruzada de 10 folds aplicando SMOTE solo de
 | Archivo | Descripción |
 |---|---|
 | `Proyecto_Attrition_BankChurners.ipynb` | Notebook con todo el análisis, los modelos y las conclusiones |
+| `BankChurners.csv` | Base de datos original de Kaggle (10.127 clientes, 23 columnas) |
 | `app.py` | Aplicación web de Streamlit |
 | `modelo-attrition.pkl` | Modelo final guardado (modelo, codificador de la variable objetivo, lista de variables y normalizador) |
 | `requirements.txt` | Librerías necesarias, con sus versiones |
